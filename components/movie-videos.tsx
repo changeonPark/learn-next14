@@ -3,6 +3,9 @@ const URL = "https://nomad-movies.nomadcoders.workers.dev/movies"
 const getVideo = async (id: string) => {
   console.log(`fetching vidoes: ${Date.now()}`)
   await new Promise((resolve) => setTimeout(resolve, 3000))
+
+  throw new Error("somthing error...")
+
   const response = await fetch(`${URL}/${id}/videos`)
 
   return response.json()
