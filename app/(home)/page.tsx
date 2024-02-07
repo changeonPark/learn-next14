@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 export const metadata = {
   title: "Home",
 }
@@ -5,19 +7,22 @@ export const metadata = {
 const URL = "https://nomad-movies.nomadcoders.workers.dev/movies"
 
 const getMovies = async () => {
-  console.log("call getMovies")
-
-  await new Promise((resolve) => setTimeout(resolve, 5000))
-
   const response = await fetch(URL)
-  const data = await response.json()
-  return data
+  return response.json()
 }
 
 const HomePage = async () => {
   const movies = await getMovies()
 
-  return <h1>{JSON.stringify(movies)}</h1>
+  return (
+    <div>
+      {movies.map((movie) => (
+        <li key={movie.id}>
+          <Link href={`/movies/${movie.id}`}>{movie.title}</Link>
+        </li>
+      ))}
+    </div>
+  )
 }
 
 export default HomePage
