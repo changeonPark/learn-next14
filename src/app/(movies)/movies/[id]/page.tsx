@@ -1,6 +1,6 @@
+import MovieInfo from "@/components/movie-info"
+import MovieVideos from "@/components/movie-videos"
 import { Suspense } from "react"
-import MovieInfo from "../../../../components/movie-info"
-import MovieVideos from "../../../../components/movie-videos"
 
 const Page = async ({ params: { id } }: { params: { id: string } }) => {
   // { params: { id: '1' }, searchParams: { region: 'kr', page: '2' } }

@@ -16,7 +16,7 @@ const HomePage = async () => {
 
   return (
     <div>
-      {movies.map((movie) => (
+      {movies.map((movie: any) => (
         <li key={movie.id}>
           <Link href={`/movies/${movie.id}`}>{movie.title}</Link>
         </li>
