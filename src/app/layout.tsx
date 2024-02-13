@@ -1,8 +1,6 @@
-import Navigation from "@/components/Navigation"
-import { Button } from "@/shared/ui/button"
-import "@/styles/global.css"
+import "@/shared/styles/global.css"
 import { Metadata } from "next"
-import Link from "next/link"
+import { Navigation } from "@/wigets/header"
 
 // layout, page만 사용 가능!
 export const metadata: Metadata = {
@@ -18,7 +16,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body>
         <Navigation />
-        <Button asChild><Link href={"/about-us"}>asdasd</Link></Button>
         {children}
       </body>
     </html>

@@ -1,6 +1,5 @@
 "use client"
 
-import { Button } from "@/shared/ui/button"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 
@@ -11,7 +10,6 @@ const Navigation = () => {
 
   return (
     <nav>
-      <Button onClick={() => alert("shadcn onclick")}>ShadCn Test</Button>
       <ul>
         <li>
           <Link href={"/"}>Home</Link> {path === "/" ? "✅" : null}

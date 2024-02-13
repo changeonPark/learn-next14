@@ -1,5 +1,5 @@
-import MovieInfo from "@/components/movie-info"
-import MovieVideos from "@/components/movie-videos"
+import { MovieInfo } from "@/features/movie-info"
+import { MovieVideos } from "@/features/movie-videos"
 import { Suspense } from "react"
 
 const Page = async ({ params: { id } }: { params: { id: string } }) => {

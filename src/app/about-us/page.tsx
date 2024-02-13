@@ -1,5 +1,5 @@
+import { Avatar } from "@/wigets/avatar"
 import { Metadata } from "next"
-import Avatar from "./components/Avatar"
 
 export const metadata: Metadata = {
   title: "About Us",
