@@ -13,6 +13,8 @@
 
 니코쌤이 제공한 API를 사용해 영화 목록, 상세 정보, 영상을 각 페이지별로 보여줍니다
 
+FSD 아키텍처를 적용해 느슨한 결합, 높은 응집력을 달성하고 이를 통해 관심사의 분리, 뛰어난 가독성, 쉬운 유지보수를 달성합니다
+
 ## :wrench: Installation and Usage
 
 - `git clone` 후 `pnpm install` 명령어를 사용해 package를 설치합니다
