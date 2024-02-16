@@ -1,3 +1,4 @@
+import { ClientTest } from "@/features/movie-videos"
 import { MovieList } from "@/wigets/movie"
 
 export const metadata = {
@@ -5,7 +6,12 @@ export const metadata = {
 }
 
 const HomePage = async () => {
-  return <MovieList />
+  return (
+    <>
+      <MovieList />
+      <ClientTest />
+    </>
+  )
 }
 
 export default HomePage
