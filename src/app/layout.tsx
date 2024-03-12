@@ -1,6 +1,7 @@
 import "@/shared/styles/global.css"
 import { Metadata } from "next"
 import { Navigation } from "@/wigets/header"
+import { CreatedBy } from "@/wigets/footer"
 
 // layout, page만 사용 가능!
 export const metadata: Metadata = {
@@ -19,6 +20,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Navigation />
         </header>
         <main className="pt-10">{children}</main>
+        <footer>
+          <CreatedBy />
+        </footer>
       </body>
     </html>
   )
