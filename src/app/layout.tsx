@@ -15,8 +15,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body>
-        <Navigation />
-        {children}
+        <header className="fixed inset-0 h-10 flex justify-center">
+          <Navigation />
+        </header>
+        <main className="pt-10">{children}</main>
       </body>
     </html>
   )

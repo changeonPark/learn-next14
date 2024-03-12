@@ -1,24 +1,50 @@
 "use client"
 
+import {
+  NavigationMenu,
+  NavigationMenuIndicator,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  navigationMenuTriggerStyle,
+} from "@/shared/ui/navigation-menu"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
+
+type routePath = {
+  path: string
+  title: string
+}
+
+const routePaths: routePath[] = [
+  {
+    path: "/",
+    title: "Home",
+  },
+  {
+    path: "/about-us",
+    title: "About Us",
+  },
+]
 
 const Navigation = () => {
   const path = usePathname()
 
-  console.log("path : ", path)
-
   return (
-    <nav>
-      <ul>
-        <li>
-          <Link href={"/"}>Home</Link> {path === "/" ? "✅" : null}
-        </li>
-        <li>
-          <Link href={"/about-us"}>About Us</Link> {path === "/about-us" ? "✅" : null}
-        </li>
-      </ul>
-    </nav>
+    <NavigationMenu>
+      <NavigationMenuList>
+        {routePaths.map((route) => (
+          <NavigationMenuItem key={route.path}>
+            <Link href={route.path} legacyBehavior passHref>
+              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                {route.title} {path === route.path ? "✅" : null}
+              </NavigationMenuLink>
+            </Link>
+          </NavigationMenuItem>
+        ))}
+      </NavigationMenuList>
+      <NavigationMenuIndicator />
+    </NavigationMenu>
   )
 }
 
