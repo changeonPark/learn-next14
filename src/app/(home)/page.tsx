@@ -1,4 +1,4 @@
-import { ClientTest } from "@/features/movie-videos"
+import { cn } from "@/shared/lib/utils"
 import { MovieList } from "@/wigets/movie"
 
 export const metadata = {
@@ -7,10 +7,9 @@ export const metadata = {
 
 const HomePage = async () => {
   return (
-    <>
+    <div className="grid grid-cols-5 gap-4">
       <MovieList />
-      <ClientTest />
-    </>
+    </div>
   )
 }
 

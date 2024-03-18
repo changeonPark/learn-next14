@@ -2,6 +2,7 @@ import "@/shared/styles/global.css"
 import { Metadata } from "next"
 import { Navigation } from "@/wigets/header"
 import { CreatedBy } from "@/wigets/footer"
+import { cn } from "@/shared/lib/utils"
 
 // layout, page만 사용 가능!
 export const metadata: Metadata = {
@@ -15,12 +16,14 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body>
+      <body className="bg-slate-200 dark:bg-slate-700">
         <header className="fixed inset-0 h-10 flex justify-center">
           <Navigation />
         </header>
-        <main className="pt-10">{children}</main>
-        <footer>
+        <main className={cn("container flex justify-center items-center", "pt-12")}>
+          {children}
+        </main>
+        <footer className={cn("flex justify-center items-center")}>
           <CreatedBy />
         </footer>
       </body>
