@@ -1,1 +1,1 @@
-export { default as MovieList } from "./ui/movie-list/movie-list"
+export { MovieList } from "./ui/movie-list"
