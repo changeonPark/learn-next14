@@ -6,7 +6,7 @@ const Page = async ({ params: { id } }: { params: { id: string } }) => {
   // { params: { id: '1' }, searchParams: { region: 'kr', page: '2' } }
 
   return (
-    <div>
+    <div className="flex flex-col gap-8">
       <Suspense fallback={<h1>Loading movie info</h1>}>
         <MovieInfo id={id} />
       </Suspense>
