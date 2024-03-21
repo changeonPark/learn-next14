@@ -15,6 +15,8 @@
 
 FSD 아키텍처를 적용해 느슨한 결합, 높은 응집력을 달성하고 이를 통해 관심사의 분리, 뛰어난 가독성, 쉬운 유지보수를 달성합니다
 
+shadcn/ui를 사용해 빠른 UI 개발과 headless ui를 달성합니다.
+
 ## :wrench: Installation and Usage
 
 - `git clone` 후 `pnpm install` 명령어를 사용해 package를 설치합니다
